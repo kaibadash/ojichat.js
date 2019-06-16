@@ -1,0 +1,9 @@
+{
+  "name": "ojichat.js",
+  "version": "0.0.1",
+  "description": "A pure JavaScript porting of ojichat.",
+  "main": "index.js",
+  "repository": "git@github.com:kaibadash/ojichat.js.git",
+  "author": "kaiba <kaibadash@gmail.com>",
+  "license": "MIT"
+}
