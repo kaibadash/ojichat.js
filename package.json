@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "git@github.com:kaibadash/ojichat.js.git",
   "author": "kaiba <kaibadash@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }
