@@ -2,14 +2,33 @@
   "name": "ojichat.js",
   "version": "0.0.1",
   "description": "A pure JavaScript porting of ojichat.",
-  "main": "index.js",
-  "repository": "git@github.com:kaibadash/ojichat.js.git",
-  "author": "kaiba <kaibadash@gmail.com>",
-  "license": "MIT",
+  "engines": {
+    "node": ">= 10.13 <11"
+  },
   "devDependencies": {
-    "jest": "^24.8.0"
+    "@types/jest": "^24.0.0",
+    "@types/node": "^10.14.0",
+    "jest": "~24.8.0",
+    "prettier": "~1.17.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.0",
+    "tslint": "~5.16.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-microsoft-contrib": "~6.1.0",
+    "tsutils": "~3.10.0",
+    "typescript": "~3.4.0"
   },
   "scripts": {
-    "test": "jest"
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "kaiba",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "tslib": "~1.9.3"
   }
 }
