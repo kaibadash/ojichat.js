@@ -8,7 +8,7 @@ import { OjisanEmotion } from './OjisanEmotion';
 export class Onara {
     public getMessage(target: string, emojiNum = 4, punctuationLevel = 0): string {
         let pattern: OnaraPattern = this.selectPattern();
-        return pattern.getMessage(target);
+        return pattern.getMessage(target, emojiNum, punctuationLevel);
     }
 
     private selectPattern(): OnaraPattern {

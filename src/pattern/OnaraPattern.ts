@@ -10,7 +10,7 @@ export class OnaraPattern {
     constructor(private pattern: OjisanEmotion[]) {
     }
 
-    public getMessage(target: string): string {
+    public getMessage(target: string, emojiNum: number, punctuationLevel: number): string {
         let template = "";
         this.pattern.forEach((emotion) => {
             template += OnaraMessages.selectTemplate(emotion);
@@ -18,7 +18,7 @@ export class OnaraPattern {
 
         let result = template;
         result = this.convertTags(result);
-        result = this.convertEmoji(result);
+        result = this.convertEmoji(result, emojiNum);
         result = this.convertTarget(result, target);
 
         return result;
@@ -37,14 +37,16 @@ export class OnaraPattern {
         return result;
     }
 
-    private convertEmoji(result: string): string {
+    private convertEmoji(result: string, emojiNum: number): string {
         Object.values(EmojiType).forEach((emojiType) => {
             let count = result.split(`{${emojiType}}`).length - 1;
             _.times(count, (i) => {
-                result = result.replace(
-                    `{${emojiType}}`,
-                    _.shuffle<string>(EmojiTags.selectTags(emojiType as EmojiType))[0]
-                );
+                let emojiList = _.shuffle<string>(EmojiTags.selectTags(emojiType as EmojiType));
+                let n = _.random(emojiNum);
+                if (n > emojiList.length) n = emojiList.length - 1;
+                let content = emojiList.slice(0, n + 1).join("");
+                _.shuffle<string>(EmojiTags.selectTags(emojiType as EmojiType))
+                result = result.replace(`{${emojiType}}`, content);
             })
         });
         return result;
