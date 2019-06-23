@@ -31,7 +31,7 @@
     "test:watch": "jest --watch"
   },
   "author": "kaiba",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
     "@types/underscore": "^1.9.0",
     "commander": "^2.20.0",
