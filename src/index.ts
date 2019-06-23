@@ -1,2 +1,2 @@
-var ojichat = require('./build/src/Generator');
+var ojichat = require('./generator/Generator');
 module.exports = ojichat;

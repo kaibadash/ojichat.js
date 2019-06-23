@@ -3,7 +3,7 @@ import { female } from "node-gimei";
 import * as _ from "underscore";
 
 export class Generator {
-    constructor(private target = "", private emojiNum) {
+    constructor(private target = "", private emojiNum = 3) {
         if (this.target == null || this.target == "") {
             this.target = this.getRandomFirstName() + this.getRandomNameSuffix();
         } else {
