@@ -26,10 +26,13 @@ export class OnaraPattern {
 
     private convertTags(result: string): string {
         Object.values(TagType).forEach((tagType) => {
-            result = result.replace(
-                `{${tagType}}`,
-                _.shuffle<string>(Tags.selectTags(tagType as TagType))[0]
-            );
+            let count = result.split(`{${tagType}}`).length - 1;
+            _.times(count, (i) => {
+                result = result.replace(
+                    `{${tagType}}`,
+                    _.shuffle<string>(Tags.selectTags(tagType as TagType))[0]
+                );
+            });
         });
         return result;
     }
