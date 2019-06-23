@@ -1,49 +1,42 @@
-[![TypeScript version][ts-badge]][typescript-34]
-[![Node.js version][nodejs-badge]][nodejs]
-[![APLv2][license-badge]][LICENSE]
-[![Build Status][travis-badge]][travis-ci]
+A pure JavaScript porting of [ojichat](https://github.com/greymd/ojichat)
 
-[![Donate][donate-badge]][donate]
+## How to use
 
-# node-typescript-boilerplate
-
-Minimalistic boilerplate to jump-start a [Node.js][nodejs] project in [TypeScript][typescript] [3.4][typescript-34].
-
-What's included:
-
-+ [TypeScript][typescript] [3.4][typescript-34],
-+ [TSLint][tslint] with [Microsoft rules][tslint-microsoft-contrib],
-+ [Jest][jest] unit testing and code coverage,
-+ Type definitions for Node.js and Jest,
-+ [Prettier][prettier] to enforce a consistent code style,
-+ [NPM scripts for common operations](#available-scripts),
-+ a simple example of TypeScript code and unit test,
-+ .editorconfig for consistent file format.
-
-## Quick start
-
-This project is intended to be used with the latest Active LTS release of [Node.js][nodejs]. To start, just clone the repository with following commands:
+### CLI
 
 ```sh
-git clone https://github.com/jsynowiec/node-typescript-boilerplate
-cd node-typescript-boilerplate
-npm install
+$ yarn add ojichatjs
+
+$ ojichatjs -h
+Usage: ojichatjs [options]
+
+Options:
+  -v, --version              output the version number
+  -e, --emojinum <emojinum>  EmojiNum
+  -h, --help                 output usage information
+
+$ node_modules/.bin/ojichatjs
+ｵｼﾞｻﾝはシュリちゃん一筋だよ😴(＃￣З￣)ゆっくり、身体休めてね😄😃✋💕(^з<)😚オヤスミナサイ💤🛌
+
+$ node_modules/.bin/ojichatjs -e 1
+すみえちゃん、オハヨー❗すみえちゃんにとって素敵な1日になりますように(^з<)😘
+
+$ node_modules/.bin/ojichatjs -e 1 kaiba
+風邪ひかないようにね（笑）ボクはkaibaチャンの味方だからね💕(^з<)
 ```
 
-or download and unzip current `master` branch:
+### JavaScript
 
-```sh
-wget https://github.com/jsynowiec/node-typescript-boilerplate/archive/master.zip -O node-typescript-boilerplate
-unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
+```JavaScript
+import * as ojichat from "ojichat.js";
+
+// simple
+console.log(new ojichat.Generator().getMessage());
+// with target name
+console.log(new ojichat.Generator("kaiba").getMessage());
+// with target name and emoji number
+console.log(new ojichat.Generator("kaiba", 1).getMessage());
 ```
-
-Now start adding your code in the `src` and unit tests in the `__tests__` directories. Have fun and build amazing things 🚀
-
-### Unit tests in JavaScript
-
-Writing unit tests in TypeScript can sometimes be troublesome and confusing. Especially when mocking dependencies and using spies.
-
-This is **optional**, but if you want to learn how to write JavaScript tests for TypeScript modules, read the [corresponding wiki page][wiki-js-tests].
 
 ## Available scripts
 
@@ -55,23 +48,5 @@ This is **optional**, but if you want to learn how to write JavaScript tests for
 + `test:watch` - interactive watch mode to automatically re-run tests
 
 ## License
-Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-typescript-boilerplate/blob/master/LICENSE) file for details.
+MIT
 
-[ts-badge]: https://img.shields.io/badge/TypeScript-3.4-blue.svg
-[nodejs-badge]: https://img.shields.io/badge/Node.js->=%2010.13-blue.svg
-[nodejs]: https://nodejs.org/dist/latest-v10.x/docs/api/
-[travis-badge]: https://travis-ci.org/jsynowiec/node-typescript-boilerplate.svg?branch=master
-[travis-ci]: https://travis-ci.org/jsynowiec/node-typescript-boilerplate
-[typescript]: https://www.typescriptlang.org/
-[typescript-34]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html
-[license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
-[license]: https://github.com/jsynowiec/node-typescript-boilerplate/blob/master/LICENSE
-
-[donate-badge]: https://img.shields.io/badge/☕-buy%20me%20a%20coffee-46b798.svg
-[donate]: https://paypal.me/jaqb/5eur
-
-[jest]: https://facebook.github.io/jest/
-[tslint]: https://palantir.github.io/tslint/
-[tslint-microsoft-contrib]: https://github.com/Microsoft/tslint-microsoft-contrib
-[wiki-js-tests]: https://github.com/jsynowiec/node-typescript-boilerplate/wiki/Unit-tests-in-plain-JavaScript
-[prettier]: https://prettier.io
