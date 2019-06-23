@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Generator } from "./generator/Generator";
 import * as commander from "commander"
 
@@ -9,5 +10,5 @@ commander
 const emojiNum: number = parseInt(commander.emojinum);
 const target: string = commander.args.pop();
 
-let ojichat = new Generator(target, emojiNum == NaN ? 4 : emojiNum);
+let ojichat = new Generator(target, isNaN(emojiNum) ? 4 : emojiNum);
 console.log(ojichat.getMessage());
