@@ -48,6 +48,6 @@ export class OnaraPattern {
     }
 
     private convertTarget(result: string, target: string): string {
-        return result.replace("{TARGET_NAME}", target);
+        return result.replace(/{TARGET_NAME}/g, target);
     }
 }

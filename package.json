@@ -30,6 +30,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@types/underscore": "^1.9.0",
+    "node-gimei": "^0.0.4",
     "tslib": "~1.9.3",
     "underscore": "^1.9.1"
   }

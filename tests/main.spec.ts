@@ -4,6 +4,6 @@ describe('Generator', () => {
   beforeAll(async () => { });
 
   it('Generator', () => {
-    expect("Fizz").toBe(new Generator("kaiba").getMessage());
+    expect("Fizz").toBe(new Generator("").getMessage());
   });
 });
