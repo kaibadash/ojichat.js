@@ -10,7 +10,7 @@ export class OnaraPattern {
     constructor(private pattern: OjisanEmotion[]) {
     }
 
-    public getMessage(target: string, emojiNum: number, punctuationLevel: number): string {
+    public getMessage(target: string, emojiNum: number): string {
         let template = "";
         this.pattern.forEach((emotion) => {
             template += OnaraMessages.selectTemplate(emotion);

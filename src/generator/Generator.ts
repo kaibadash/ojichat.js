@@ -3,7 +3,7 @@ import { female } from "node-gimei";
 import * as _ from "underscore";
 
 export class Generator {
-    constructor(private target = "", private emojiNum = 4, private punctuationLevel = 0) {
+    constructor(private target = "", private emojiNum = 4) {
         if (this.target == null || this.target == "") {
             this.target = this.getRandomFirstName() + this.getRandomNameSuffix();
         } else {
@@ -12,7 +12,7 @@ export class Generator {
     }
 
     public getMessage() {
-        return new Onara().getMessage(this.target, this.emojiNum, this.punctuationLevel);
+        return new Onara().getMessage(this.target, this.emojiNum);
     }
 
     // gimei から女性の名前を無作為に選定

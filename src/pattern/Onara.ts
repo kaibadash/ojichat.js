@@ -6,9 +6,9 @@ import { OjisanEmotion } from "./OjisanEmotion";
 // おじさんの感情表現の順番を表す。
 // 近年の研究によりおじさんなりきるための効果的なアルゴリズムが提唱されている。
 export class Onara {
-    public getMessage(target: string, emojiNum = 4, punctuationLevel = 0): string {
+    public getMessage(target: string, emojiNum = 4): string {
         let pattern: OnaraPattern = this.selectPattern();
-        return pattern.getMessage(target, emojiNum, punctuationLevel);
+        return pattern.getMessage(target, emojiNum);
     }
 
     private selectPattern(): OnaraPattern {
