@@ -1,15 +1,9 @@
-import { fizzbuzz } from '../src/index';
+import { Generator } from '../src/generator/Generator';
 
-describe('fizzbuzz', () => {
+describe('Generator', () => {
   beforeAll(async () => { });
 
-  it('Fizz', () => {
-    expect("Fizz").toBe(fizzbuzz(3));
-  });
-  it('Buzz', () => {
-    expect("Buzz").toBe(fizzbuzz(5));
-  });
-  it('FizzBuzz', () => {
-    expect("FizzBuzz").toBe(fizzbuzz(15));
+  it('Generator', () => {
+    expect("Fizz").toBe(new Generator("kaiba").getMessage());
   });
 });
