@@ -1,0 +1,13 @@
+import { Generator } from "./generator/Generator";
+import * as commander from "commander"
+
+commander
+    .version("0.0.1", "-v, --version")
+    .option("-e, --emojinum <emojinum>", "EmojiNum")
+    .parse(process.argv);
+
+const emojiNum: number = parseInt(commander.emojinum);
+const target: string = commander.args.pop();
+
+let ojichat = new Generator(target, emojiNum == NaN ? 4 : emojiNum);
+console.log(ojichat.getMessage());

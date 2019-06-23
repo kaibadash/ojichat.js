@@ -5,6 +5,9 @@
   "engines": {
     "node": ">= 10.13 <11"
   },
+  "bin": {
+    "ojichatjs": "build/src/cli.js"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.0",
     "@types/node": "^10.14.0",
@@ -30,6 +33,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@types/underscore": "^1.9.0",
+    "commander": "^2.20.0",
     "node-gimei": "^0.0.4",
     "tslib": "~1.9.3",
     "underscore": "^1.9.1"
