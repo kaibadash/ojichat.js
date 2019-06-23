@@ -8,6 +8,7 @@
   "bin": {
     "ojichatjs": "build/src/cli.js"
   },
+  "main": "build/src/index.js",
   "devDependencies": {
     "@types/jest": "^24.0.0",
     "@types/node": "^10.14.0",
