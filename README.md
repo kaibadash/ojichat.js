@@ -1,4 +1,4 @@
-A pure JavaScript porting of [ojichat](https://github.com/greymd/ojichat)
+A pure JavaScript porting of [ojichat](https://github.com/greymd/ojichat).
 
 ## How to use
 
