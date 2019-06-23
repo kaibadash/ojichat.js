@@ -1,10 +1,10 @@
-import * as _ from 'underscore';
+import * as _ from "underscore";
 import { OnaraMessages } from "./OnaraMessages";
-import { Tags } from './Tags';
-import { OjisanEmotion } from './OjisanEmotion';
-import { TagType } from './TagType';
-import { EmojiType } from './EmojiType';
-import { EmojiTags } from './EmojiTag';
+import { Tags } from "./Tags";
+import { OjisanEmotion } from "./OjisanEmotion";
+import { TagType } from "./TagType";
+import { EmojiType } from "./EmojiType";
+import { EmojiTags } from "./EmojiTag";
 
 export class OnaraPattern {
     constructor(private pattern: OjisanEmotion[]) {

@@ -1,5 +1,6 @@
-import * as _ from 'underscore';
-import { OjisanEmotion } from './OjisanEmotion';
+import * as _ from "underscore";
+import { OjisanEmotion } from "./OjisanEmotion";
+
 export class OnaraMessages {
     public static selectTemplate(emotion: OjisanEmotion): string {
         let messages: string[] = [];

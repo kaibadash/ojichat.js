@@ -1,6 +1,6 @@
-import * as _ from 'underscore';
-import { OnaraPattern } from './OnaraPattern';
-import { OjisanEmotion } from './OjisanEmotion';
+import * as _ from "underscore";
+import { OnaraPattern } from "./OnaraPattern";
+import { OjisanEmotion } from "./OjisanEmotion";
 
 // Onara ... Ojisan NArikiri Randomized Algorithm: おじさんなりきり乱択アルゴリズム
 // おじさんの感情表現の順番を表す。

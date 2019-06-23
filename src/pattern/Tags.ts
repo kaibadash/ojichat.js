@@ -1,5 +1,5 @@
-import * as _ from 'underscore';
-import { TagType } from './TagType';
+import * as _ from "underscore";
+import { TagType } from "./TagType";
 
 export class Tags {
     public static selectTags(tag: TagType): string[] {

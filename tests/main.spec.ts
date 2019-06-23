@@ -1,9 +1,9 @@
-import { Generator } from '../src/generator/Generator';
+import { Generator } from "../src/generator/Generator";
 
-describe('Generator', () => {
+describe("Generator", () => {
   beforeAll(async () => { });
 
-  it('Generator', () => {
+  it("Generator", () => {
     expect("Fizz").toBe(new Generator("").getMessage());
   });
 });

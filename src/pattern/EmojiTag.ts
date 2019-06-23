@@ -1,5 +1,5 @@
-import * as _ from 'underscore';
-import { EmojiType } from './EmojiType';
+import * as _ from "underscore";
+import { EmojiType } from "./EmojiType";
 
 export class EmojiTags {
     public static selectTags(tag: EmojiType): string[] {
