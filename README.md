@@ -7,7 +7,7 @@ A pure JavaScript porting of [ojichat](https://github.com/greymd/ojichat)
 ```sh
 $ yarn add ojichatjs
 
-$ ojichatjs -h
+$ node_modules/.bin/ojichatjs -h
 Usage: ojichatjs [options]
 
 Options:
