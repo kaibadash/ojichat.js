@@ -3,7 +3,7 @@ import { Generator } from "./generator/Generator";
 import * as commander from "commander"
 
 commander
-    .version("0.0.1", "-v, --version")
+    .version("0.0.3", "-v, --version")
     .option("-e, --emojinum <emojinum>", "EmojiNum")
     .parse(process.argv);
 

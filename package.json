@@ -1,6 +1,6 @@
 {
   "name": "ojichat.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A pure JavaScript porting of ojichat.",
   "engines": {
     "node": ">= 10.13 <11"
