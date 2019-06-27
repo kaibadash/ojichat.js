@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "A pure JavaScript porting of ojichat.",
   "engines": {
-    "node": ">= 10.13 <11"
+    "node": ">= 10.13"
   },
   "bin": {
     "ojichatjs": "build/src/cli.js"
