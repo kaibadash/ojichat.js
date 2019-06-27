@@ -1,6 +1,6 @@
 import { Onara } from "../pattern/Onara";
-import { female } from "node-gimei";
 import * as _ from "underscore";
+import { FemaleGimei } from './FemaleGimei';
 
 export class Generator {
     constructor(private target = "", private emojiNum = 3) {
@@ -17,14 +17,13 @@ export class Generator {
 
     // gimei から女性の名前を無作為に選定
     private getRandomFirstName(): string {
-        let name = female();
         switch (_.random(2)) {
             case 0:
-                return name.first().kanji();
+                return FemaleGimei.kanji();
             case 1:
-                return name.first().katakana();
+                return FemaleGimei.katakana();
         }
-        return name.first().hiragana();
+        return FemaleGimei.hiragana();
     }
 
     // 「ちゃん」「チャン」などをランダムに返す
