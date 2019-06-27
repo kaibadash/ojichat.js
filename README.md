@@ -28,7 +28,7 @@ $ node_modules/.bin/ojichatjs -e 1 kaiba
 ### JavaScript
 
 ```JavaScript
-import * as ojichat from "ojichat.js";
+import { ojichat } from "ojichat.js";
 
 // simple
 console.log(new ojichat.Generator().getMessage());
